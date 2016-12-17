@@ -1,4 +1,7 @@
+package edu.iis.mto.bsearch;
+
 import static org.junit.Assert.*;
+
 
 
 
