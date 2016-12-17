@@ -1,17 +1,39 @@
-package org.junit.jupiter.api;
-import org.mockito.Mock;
-import com.example.mockito.MockitoExtension;
+import static org.junit.Assert.*;
 
 
 
-public class LengthOneIsInSeq {
+import junit.framework.Assert;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.JUnitCore; 
+import org.junit.runner.Result; 
+import org.junit.runner.notification.Failure;
+
+import edu.iis.mto.bsearch.BinarySearch;
+import edu.iis.mto.bsearch.SearchResult; 
+
+
+public class LengthOneIsInSeq{
+//BinarySearch bs = new BinarySearch();
+SearchResult sr = new SearchResult();
+
+
 	@Before
-	void init(@Mock SearchResult searchResult ){
-		when(searchResult.isFound()).thenReturn(true);
-		when(searchResult.getPosition().thenReturn(2))
+	public void init(){
+		//when(searchResult.isFound()).thenReturn(true);
+		//when(searchResult.getPosition().thenReturn(2));
+		
+		int position = sr.getPosition();
+		
+		
+		
 	}
-	void oneIsInSeq(){
-		assertTrue(searchResult.isFound()&&searchResult.getPosition())
+	@Test
+	public void oneIsInSeq(){
+		int position = sr.getPosition();
+		assertEquals("true",sr.isFound());
+		assertEquals(position,sr.getPosition());
 	}
 		
 	
