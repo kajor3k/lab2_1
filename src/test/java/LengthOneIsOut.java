@@ -17,21 +17,25 @@ import edu.iis.mto.bsearch.SearchResult;
 public class LengthOneIsOut{
 BinarySearch bs = new BinarySearch();
 SearchResult sr = new SearchResult();
+int key = 1;
+int seq[] = {2};
 
 
 	@Before
 	public void init(){
 		
+		sr = BinarySearch.search(key, seq);
 		
+		
+	
 		
 		
 		
 	}
 	@Test
-	public void oneIsInSeq(){
-		int position = sr.getPosition();
-		assertEquals(false,sr.isFound());
-		assertEquals(position,sr.getPosition());
+	public void oneIsOut(){
+		
+		assertSame(false,sr.isFound());
 	}
 		
 	
