@@ -1,9 +1,10 @@
 package edu.iis.mto.bsearch;
 
 import static org.junit.Assert.*;
-
-
-
+import static org.junit.Assert.assertThat;
+import org.hamcrest.Matcher;
+import static org.hamcrest.CoreMatchers.*;
+import org.junit.*;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Before;
@@ -19,6 +20,8 @@ import edu.iis.mto.bsearch.SearchResult;
 public class FirstElem{
 BinarySearch bs = new BinarySearch();
 SearchResult sr = new SearchResult();
+private int position = 1;
+int response;
 int key = 2;
 int seq[] = {2,5,3,4};
 
@@ -29,6 +32,7 @@ int seq[] = {2,5,3,4};
 		sr = BinarySearch.search(key, seq);
 		
 		
+		response = sr.getPosition();
 	
 		
 		
@@ -37,13 +41,13 @@ int seq[] = {2,5,3,4};
 	@Test
 	public void isFound(){
 		
-		assertSame(true,sr.isFound());
+		assertThat(sr.isFound(), is(true));
 	}
 	@Test
 	public void isFirst(){
 		
-		assertSame("( elem at position 1 )",sr.toString());
+		assertThat(position, is(response));
 	}
-		
+
 	
 }
