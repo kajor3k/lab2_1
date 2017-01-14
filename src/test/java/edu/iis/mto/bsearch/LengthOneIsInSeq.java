@@ -1,5 +1,6 @@
 package edu.iis.mto.bsearch;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 
@@ -36,9 +37,9 @@ int seq[] = {1};
 		
 	}
 	@Test
-	public void oneIsOut(){
+	public void isFound(){
 		
-		assertSame(true,sr.isFound());
+		assertThat(sr.isFound(), is(true));
 	}
 		
 	
