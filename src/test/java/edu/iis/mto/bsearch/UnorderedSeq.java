@@ -17,13 +17,13 @@ import edu.iis.mto.bsearch.BinarySearch;
 import edu.iis.mto.bsearch.SearchResult; 
 
 
-public class MidElem{
+public class UnorderedSeq{
 BinarySearch bs = new BinarySearch();
 SearchResult sr = new SearchResult();
-private int position = 3;
+private int position =3;
 int response;
-int key = 3;
-int seq[] = {1,2,3,4,5};
+int key = 4;
+int seq[] = {1,3,4,6,9};
 
 	@Before
 	public void init(){
@@ -43,7 +43,7 @@ int seq[] = {1,2,3,4,5};
 		assertThat(sr.isFound(), is(true));
 	}
 	@Test
-	public void isMiddle(){
+	public void isFirst(){
 		
 		assertThat(position, is(response));
 	}

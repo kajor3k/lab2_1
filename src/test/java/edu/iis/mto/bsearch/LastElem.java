@@ -22,8 +22,8 @@ BinarySearch bs = new BinarySearch();
 SearchResult sr = new SearchResult();
 private int position = 5;
 int response;
-int key = 4;
-int seq[] = {2,5,3,1,4};
+int key = 5;
+int seq[] = {1,2,3,4,5};
 
 
 	@Before

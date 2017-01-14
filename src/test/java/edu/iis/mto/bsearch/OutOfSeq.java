@@ -23,8 +23,7 @@ SearchResult sr = new SearchResult();
 private int position = -1;
 int response;
 int key = 6;
-int seq[] = {2,5,3,1,4};
-
+int seq[] = {1,2,3,4,5};
 
 	@Before
 	public void init(){
